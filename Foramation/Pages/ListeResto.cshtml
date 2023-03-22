@@ -1,0 +1,41 @@
+﻿@page
+@model Foramation.Pages.ListeRestoModel
+@{
+}
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Discription</th>
+            <th scope="col">PhoneNumber</th>
+        </tr>
+    </thead>
+    <tbody>
+         @foreach (var itm in Model.Restos)
+    {
+        <tr>
+           
+                <td>@itm.id</td>
+                <td>@itm.name</td>
+                <td>@itm.Address</td>
+                <td>@itm.Discription</td>
+                <td>@itm.PhoneNumber</td>
+                <td>
+                <form method="post" asp-page-handler="Edit" asp-route-id="@itm.id"class="flex-row my-1">
+                    <button type="submit" class="btn btn-primary align-self-auto">Edit</button>
+                </form>
+                <form method="post" asp-page-handler="Delete" asp-route-id="@itm.id" class="flex-row my-1">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                </td>
+               
+
+
+        </tr>
+        }
+    </tbody>
+</table>

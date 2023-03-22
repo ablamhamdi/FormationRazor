@@ -1,0 +1,47 @@
+﻿@page
+@model Foramation.Pages.EditModel
+@{
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <form method="post">
+        <table>
+            <tr>
+                <td> id: </td>
+                <td><input type="text" id="id" name="id" value="@Model.Restos.id" /></td>
+            </tr>
+            <tr>
+                <td> name: </td>
+                <td><input type="text" id="name" name="name"value="@Model.Restos.name" /></td>
+            </tr>
+            <tr>
+                <td> Address</td>
+                <td><input type="text" id="Address" name="Address" value="@Model.Restos.Address" /></td>
+            </tr>
+            <tr>
+                <td> Discription</td>
+                <td><input type="text" id="Discription" name="Discription" value="@Model.Restos.Discription" /></td>
+            </tr>
+            <tr>
+                <td> PhoneNumber</td>
+                <td><input type="text" id="PhoneNumber" name="PhoneNumber" value="@Model.Restos.PhoneNumber" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" asp-page-handler="Submit" /></td>
+            </tr>
+        </table>
+        <hr />
+
+    </form>
+</body>
+</html>
